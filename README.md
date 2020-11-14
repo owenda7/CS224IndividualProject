@@ -3,7 +3,7 @@
 <h3> DELIVERABLE 2 NOTES: </h3>
 
 Data has been hardcoded as 'Task' objects to represent how data will be viewed on main list view
-\nTODO: Add due dates to list view
+TODO: Add due dates to list view
 
 Function has been implemented to create new task item
 TODO: Make task item editable
