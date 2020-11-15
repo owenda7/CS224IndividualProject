@@ -1,4 +1,6 @@
 # CS224IndividualProject
+XCODE VERSION: 12.2
+IPHONE MODEL: 8
 
 <h3> DELIVERABLE 2 NOTES: </h3>
 
