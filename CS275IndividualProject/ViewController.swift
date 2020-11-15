@@ -37,7 +37,7 @@ extension ViewController: UITableViewDataSource {
         return tasks.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let cell = UITableViewCell(style: .value1, reuseIdentifier: "UITableViewCell")
         cell.textLabel?.text = tasks[indexPath.row].name
         cell.detailTextLabel?.text = tasks[indexPath.row].date
         return cell
@@ -45,7 +45,7 @@ extension ViewController: UITableViewDataSource {
     
     // Add blank row
     @IBAction func addRow(_ sender: UIButton){
-        tasks.append(Task(name: "New Task",date: "",desc: ""))
+        tasks.append(Task(name: "New Task",date: "0/0",desc: ""))
         tableView.reloadData()
     }
     
