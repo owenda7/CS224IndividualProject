@@ -9,7 +9,9 @@ import UIKit
 
 class ViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
-        
+
+    var task = Task(name: "", date: "", desc: "")
+    
     var tasks = [
         Task(name: "CS275 Homework",date: "11/14",desc: "Deliverable 2"),
         Task(name: "CS224 Homework",date: "11/18",desc: "Homework 10 Programming"),
@@ -25,9 +27,22 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: UITableViewDelegate {
+extension ViewController: UITableViewDelegate, returnDataToMainView{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(tasks[indexPath.row].desc)
+        self.task = tasks[indexPath.row]
+        tasks.remove(at: indexPath.row)
+        performSegue(withIdentifier: "taskSegue", sender: self)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let dest = segue.destination as! DetailViewController
+        dest.task = self.task
+        dest.delegate = self
+    }
+    func returnDataFromDetailView(task: Task?){
+        if task != nil {
+            tasks.append(task ?? Task(name: "", date: "", desc: ""))
+        }
+        tableView.reloadData()
     }
 }
 
@@ -49,6 +64,20 @@ extension ViewController: UITableViewDataSource {
         tableView.reloadData()
     }
     
+    @IBAction func toggleEditingMode(_ sender: UIButton) {
+        if isEditing {
+            // Change text of button to inform user of state
+            sender.setTitle("Edit", for: .normal)
+            // Turn off editing mode
+            setEditing(false, animated: true)
+        } else {
+            // Change text of button to inform user of state
+            sender.setTitle("Done", for: .normal)
+            // Enter editing mode
+            setEditing(true, animated: true)
+        }
+    }
+    
     // Swipe delete row
     func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
         return .delete
@@ -62,5 +91,7 @@ extension ViewController: UITableViewDataSource {
             
         }
     }
+    
+    
 }
     

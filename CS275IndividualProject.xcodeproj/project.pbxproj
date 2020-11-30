@@ -16,6 +16,7 @@
 		4D9D3C3B256067EC00F7D700 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D9D3C39256067EC00F7D700 /* LaunchScreen.storyboard */; };
 		4D9D3C46256067EC00F7D700 /* CS275IndividualProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9D3C45256067EC00F7D700 /* CS275IndividualProjectTests.swift */; };
 		4D9D3C51256067EC00F7D700 /* CS275IndividualProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9D3C50256067EC00F7D700 /* CS275IndividualProjectUITests.swift */; };
+		4DFCFC402572F30800E76D01 /* DetailViewControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFCFC3F2572F30800E76D01 /* DetailViewControler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		4D9D3C4C256067EC00F7D700 /* CS275IndividualProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CS275IndividualProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D9D3C50256067EC00F7D700 /* CS275IndividualProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CS275IndividualProjectUITests.swift; sourceTree = "<group>"; };
 		4D9D3C52256067EC00F7D700 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4DFCFC3F2572F30800E76D01 /* DetailViewControler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewControler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				4D9D3C30256067EB00F7D700 /* SceneDelegate.swift */,
 				4D9D3C32256067EB00F7D700 /* ViewController.swift */,
 				4D6157E42560749C002326BE /* Task.swift */,
+				4DFCFC3F2572F30800E76D01 /* DetailViewControler.swift */,
 				4D9D3C34256067EB00F7D700 /* Main.storyboard */,
 				4D9D3C37256067EC00F7D700 /* Assets.xcassets */,
 				4D9D3C39256067EC00F7D700 /* LaunchScreen.storyboard */,
@@ -264,6 +267,7 @@
 				4D6157E52560749C002326BE /* Task.swift in Sources */,
 				4D9D3C33256067EB00F7D700 /* ViewController.swift in Sources */,
 				4D9D3C2F256067EB00F7D700 /* AppDelegate.swift in Sources */,
+				4DFCFC402572F30800E76D01 /* DetailViewControler.swift in Sources */,
 				4D9D3C31256067EB00F7D700 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
