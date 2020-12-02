@@ -30,14 +30,6 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E55-fR-PlV">
-                                <rect key="frame" x="38" y="44" width="34" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Edit"/>
-                                <connections>
-                                    <action selector="toggleEditingMode:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="xNw-Bo-LH3"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task List" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="78G-KL-0tA">
                                 <rect key="frame" x="162.5" y="44" width="89.5" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
@@ -58,15 +50,12 @@
                         <constraints>
                             <constraint firstItem="I70-PO-V62" firstAttribute="centerX" secondItem="78G-KL-0tA" secondAttribute="centerX" id="2r4-8Q-avH"/>
                             <constraint firstItem="I70-PO-V62" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Azx-rQ-vPC"/>
-                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="E55-fR-PlV" secondAttribute="trailing" constant="20" symbolic="YES" id="C5Q-c9-B7I"/>
-                            <constraint firstItem="E55-fR-PlV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="38" id="D5h-Cg-ozs"/>
                             <constraint firstItem="I70-PO-V62" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="38" id="NWy-1K-a9L"/>
                             <constraint firstItem="zfI-K6-Tkf" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="78G-KL-0tA" secondAttribute="trailing" constant="8" symbolic="YES" id="R25-Nq-znu"/>
                             <constraint firstItem="zfI-K6-Tkf" firstAttribute="top" secondItem="78G-KL-0tA" secondAttribute="top" id="TyX-Oy-2dL"/>
                             <constraint firstItem="I70-PO-V62" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="h5F-RF-ueU"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="I70-PO-V62" secondAttribute="bottom" id="i08-89-5o2"/>
                             <constraint firstItem="I70-PO-V62" firstAttribute="top" secondItem="78G-KL-0tA" secondAttribute="top" constant="38" id="jAV-Ng-BT8"/>
-                            <constraint firstItem="I70-PO-V62" firstAttribute="top" secondItem="E55-fR-PlV" secondAttribute="bottom" constant="2" id="rrK-88-Yaz"/>
                             <constraint firstAttribute="trailingMargin" secondItem="zfI-K6-Tkf" secondAttribute="trailing" constant="12" id="vXM-OD-ghp"/>
                         </constraints>
                     </view>

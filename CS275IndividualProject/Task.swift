@@ -7,7 +7,7 @@
 
 import UIKit
 
-class Task: NSObject {
+class Task: NSObject, Decodable, Encodable {
     var name: String
     var date: String
     var desc: String

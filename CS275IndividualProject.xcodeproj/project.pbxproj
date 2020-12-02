@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4D6157E52560749C002326BE /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6157E42560749C002326BE /* Task.swift */; };
+		4D85DF3E25774B570044B301 /* TaskStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D85DF3D25774B570044B301 /* TaskStore.swift */; };
 		4D9D3C2F256067EB00F7D700 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9D3C2E256067EB00F7D700 /* AppDelegate.swift */; };
 		4D9D3C31256067EB00F7D700 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9D3C30256067EB00F7D700 /* SceneDelegate.swift */; };
 		4D9D3C33256067EB00F7D700 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9D3C32256067EB00F7D700 /* ViewController.swift */; };
@@ -38,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		4D6157E42560749C002326BE /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		4D85DF3D25774B570044B301 /* TaskStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskStore.swift; sourceTree = "<group>"; };
 		4D9D3C2B256067EB00F7D700 /* CS275IndividualProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CS275IndividualProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D9D3C2E256067EB00F7D700 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4D9D3C30256067EB00F7D700 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				4D9D3C30256067EB00F7D700 /* SceneDelegate.swift */,
 				4D9D3C32256067EB00F7D700 /* ViewController.swift */,
 				4D6157E42560749C002326BE /* Task.swift */,
+				4D85DF3D25774B570044B301 /* TaskStore.swift */,
 				4DFCFC3F2572F30800E76D01 /* DetailViewControler.swift */,
 				4D9D3C34256067EB00F7D700 /* Main.storyboard */,
 				4D9D3C37256067EC00F7D700 /* Assets.xcassets */,
@@ -266,6 +269,7 @@
 			files = (
 				4D6157E52560749C002326BE /* Task.swift in Sources */,
 				4D9D3C33256067EB00F7D700 /* ViewController.swift in Sources */,
+				4D85DF3E25774B570044B301 /* TaskStore.swift in Sources */,
 				4D9D3C2F256067EB00F7D700 /* AppDelegate.swift in Sources */,
 				4DFCFC402572F30800E76D01 /* DetailViewControler.swift in Sources */,
 				4D9D3C31256067EB00F7D700 /* SceneDelegate.swift in Sources */,

@@ -11,12 +11,7 @@ class ViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
 
     var task = Task(name: "", date: "", desc: "")
-    
-    var tasks = [
-        Task(name: "CS275 Homework",date: "11/14",desc: "Deliverable 2"),
-        Task(name: "CS224 Homework",date: "11/18",desc: "Homework 10 Programming"),
-        Task(name: "CS292 Homework",date: "11/24",desc: "Reflection")
-    ]
+    var taskStore = TaskStore.init()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,8 +24,8 @@ class ViewController: UIViewController {
 
 extension ViewController: UITableViewDelegate, returnDataToMainView{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.task = tasks[indexPath.row]
-        tasks.remove(at: indexPath.row)
+        self.task = taskStore.getTask(index: indexPath.row)
+        taskStore.removeItem(index: indexPath.row)
         performSegue(withIdentifier: "taskSegue", sender: self)
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -40,7 +35,7 @@ extension ViewController: UITableViewDelegate, returnDataToMainView{
     }
     func returnDataFromDetailView(task: Task?){
         if task != nil {
-            tasks.append(task ?? Task(name: "", date: "", desc: ""))
+            taskStore.addItem(task: task ?? Task(name: "", date: "", desc: ""))
         }
         tableView.reloadData()
     }
@@ -49,18 +44,18 @@ extension ViewController: UITableViewDelegate, returnDataToMainView{
 extension ViewController: UITableViewDataSource {
     // generate rows
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tasks.count
+        return taskStore.getCount()
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .value1, reuseIdentifier: "UITableViewCell")
-        cell.textLabel?.text = tasks[indexPath.row].name
-        cell.detailTextLabel?.text = tasks[indexPath.row].date
+        cell.textLabel?.text = taskStore.getTask(index: indexPath.row).name
+        cell.detailTextLabel?.text = taskStore.getTask(index: indexPath.row).date
         return cell
     }
     
     // Add blank row
     @IBAction func addRow(_ sender: UIButton){
-        tasks.append(Task(name: "New Task",date: "0/0",desc: ""))
+        taskStore.addItem(task: Task(name: "New Task",date: "0/0",desc: ""))
         tableView.reloadData()
     }
     
@@ -85,7 +80,7 @@ extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete{
             tableView.beginUpdates()
-            tasks.remove(at: indexPath.row)
+            taskStore.removeItem(index: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
             tableView.endUpdates()
             
