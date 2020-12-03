@@ -67,8 +67,8 @@ extension ViewController: UITableViewDataSource {
     
     // Function to add new blank task to store and reload view to display
     @IBAction func addRow(_ sender: UIButton){
-        taskStore.addItem(task: Task(name: "New Task",date: "01/01",desc: "Add description here..."))
-        tableView.reloadData()
+        self.task = Task(name: "New Task",date: "01/01",desc: "Add description here...")
+        performSegue(withIdentifier: "taskSegue", sender: self)
     }
     
     // Functions to delete row
